@@ -1,0 +1,26 @@
+\
+\ Tak in 8th
+\
+needs[ nk/gui ]
+
+with: nk
+
+: new-win
+  {
+    name: "main",
+    wide: 512,
+    high: 512,
+    resizeable: false,
+    bg: "black",
+    title: "Tak"
+  } win ;
+
+: settings
+  {
+    bg: "black",
+    flags: [],
+    game-state: 0
+  } ;
+
+: app:main
+  new-win ' settings -1 render-loop ;
